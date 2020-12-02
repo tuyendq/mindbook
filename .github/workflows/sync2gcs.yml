@@ -1,4 +1,4 @@
-name: Jekyll site CI
+name: Sync to GCS bucket
 
 on:
   push:
