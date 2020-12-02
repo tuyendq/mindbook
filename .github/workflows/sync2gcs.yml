@@ -14,4 +14,4 @@ jobs:
       - uses: actions/checkout@v2
       - uses: nakilon/git-to-gcs@1
         with:
-          secrets: ${{ secrets.mindbook_2practice_xyz }}
+          secrets: ${{ secrets.MINDBOOK_2PRACTICE_XYZ }}
