@@ -1,121 +1,55 @@
 <!DOCTYPE html>
-<html amp lang="en">
+<html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="MindBook: Read me first" />
 	<meta property="og:image" content="/mindbook-fbcover.png" />
 	<link rel="canonical" href="https://mindbook.2practice.xyz/">
 	<title>Read our own mind book</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-	<script async src="https://cdn.ampproject.org/v0.js"></script>
-	<style amp-custom>
-		body {
-			background-color: #007fff;
-			margin: 0;
-			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-				'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-				sans-serif;
-			-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
-		}
+        .app {
+            background-color: #007fff;
+            overflow: hidden;
+        }
 
-		.app {
-			text-align: center;
-		}
+        .main {}
 
-		.app-header {
-			min-height: 100vh;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			font-size: calc(1rem + 4vmin);
-			color: white;
-			padding: 0 4rem;
-		}
+        .boxed {
+            min-width: 96vw;
+            min-height: 96vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: calc(1rem + 4vmin);
+            border: .3rem solid #ffffff;
+        }
 
-		.author {
-			font-style: italic;
-		}
-	</style>
-	<style amp-boilerplate>
-		body {
-			-webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-			-moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-			-ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-			animation: -amp-start 8s steps(1, end) 0s 1 normal both
-		}
+        .quote {
+            font-weight: bold;
+        }
 
-		@-webkit-keyframes -amp-start {
-			from {
-				visibility: hidden
-			}
-
-			to {
-				visibility: visible
-			}
-		}
-
-		@-moz-keyframes -amp-start {
-			from {
-				visibility: hidden
-			}
-
-			to {
-				visibility: visible
-			}
-		}
-
-		@-ms-keyframes -amp-start {
-			from {
-				visibility: hidden
-			}
-
-			to {
-				visibility: visible
-			}
-		}
-
-		@-o-keyframes -amp-start {
-			from {
-				visibility: hidden
-			}
-
-			to {
-				visibility: visible
-			}
-		}
-
-		@keyframes -amp-start {
-			from {
-				visibility: hidden
-			}
-
-			to {
-				visibility: visible
-			}
-		}
-	</style><noscript>
-		<style amp-boilerplate>
-			body {
-				-webkit-animation: none;
-				-moz-animation: none;
-				-ms-animation: none;
-				animation: none
-			}
-		</style>
-	</noscript>
+        .author {
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+    </style>
 </head>
 
-<body>
-	<div class="app">
-		<header class="app-header">
-			<p class="quote">Khi làm gì, bạn để tâm đến cái mình đang làm.</p>
-			<p class="author">&mdash; Ajahn Chah</p>
-		</header>
-	</div>
-	</bofy>
+<body class="app">
+    <div class="main">
+        <div class="boxed">
+            <p class="quote">Khi làm gì, bạn để tâm đến cái mình đang làm.</p>
+            <p class="author">&mdash; Ajahn Chah</p>
+        </div>
+    </div>
+</body>
 
 </html>
