@@ -1,0 +1,17 @@
+name: Jekyll site CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: nakilon/git-to-gcs@1
+        with:
+          secrets: ${{ secrets.mindbook_2practice_xyz }}
