@@ -2,15 +2,18 @@
   "quotes": [
     {
       "quote": "Khi làm gì, bạn để tâm đến cái mình đang làm.",
-      "author": "Ajahn Chan"
+      "author": "Ajahn Chan",
+      "lang": "vi"
     },
     {
       "quote": "Nếu bạn thất niệm một phút, bạn điên đảo một phút.",
-      "author": "Ajahn Chan"
+      "author": "Ajahn Chan",
+      "lang": "vi"
     },
     {
       "quote": "Hãy quán niệm với tâm từ ái đối với mọi người và vạn vật",
-      "author": "Ajahn Brahm"
+      "author": "Ajahn Brahm",
+      "lang": "vi"
     }
   ]
 }
