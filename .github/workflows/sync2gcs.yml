@@ -3,6 +3,7 @@ name: Sync to GCS bucket
 on:
   push:
     branches: [ main ]
+    paths: [ mindbook.2practice.xyz/** ]
   pull_request:
     branches: [ main ]
 
