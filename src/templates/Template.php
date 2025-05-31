@@ -12,8 +12,8 @@ class Template {
     }
 
     static function cache($file) {
-        if ($file_exists(self::$cache_path)) {
-            mkdir(self::$cache_path, 0744)
+        if (!$file_exists(self::$cache_path)) {
+            mkdir(self::$cache_path, 0744);
         }
         $cached_file = self::$cache_path . str_replace(array('/', '.html'), array('_', ''), $file . '.php');
         if (!self::$cache_enabled || !file_exists($cached_file) || filemtime($cached_file) < filemtime($file)) {
@@ -70,7 +70,7 @@ class Template {
             } else {
                 self:: $blocks[$value[1]] = str_replace('@parent', self::$blocks[$value[1]], $value[2]);
             }
-            $code str_replace($value[0], '', $code);
+            $code = str_replace($value[0], '', $code);
         }
         return $code;
     }
