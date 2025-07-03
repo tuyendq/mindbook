@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden; /* Prevent scrollbars */
+      background-color: #001f3f; /* Navy blue */
+      font-family: 'Georgia', serif;
+    }
+
+    .frame {
+      position: absolute;
+      top: 3vw;
+      left: 3vw;
+      right: 3vw;
+      bottom: 3vw;
+      border: 8px solid white;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      color: #ffffff;
+    }
+
+    .quote-box {
+      max-width: 80%;
+      color: white;
+    }
+
+    .quote-text {
+      font-size: 1.8rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    .quote-text::before,
+    .quote-text::after {
+      content: '"';
+      font-size: 2.5rem;
+      color: #f39c12;
+      vertical-align: top;
+    }
+
+    .quote-author {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #bdc3c7;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="quote-box">
+      <div class="quote-text">
+        The future belongs to those who believe in the beauty of their dreams.
+      </div>
+      <div class="quote-author">
+        — Eleanor Roosevelt
+      </div>
+    </div>
+  </div>
+</body>
+</html>
