@@ -1,5 +1,5 @@
 {
-    "total_quotes": 17,
+    "total_quotes": 20,
     "quotes": [
         {
             "quote": "Làm gì ta biết nấy.",
@@ -89,6 +89,16 @@
         {
             "quote": "Hãy làm mọi việc với một tâm biết buông. Đừng bám vào lời khen, lợi lộc hay bất cứ điều gì khác.",
             "author": "Ajahn Chah",
+            "lang": "vi"
+        },
+        {
+            "quote": "Nếu bạn buông bỏ một chút, bạn sẽ có một chút bình an. Nếu bạn buông bỏ nhiều, bạn sẽ có nhiều bình an. Nếu bạn buông bỏ hoàn toàn, bạn sẽ có sự bình an trọn vẹn.",
+            "author": "Ajahn Chah",
+            "lang": "vi"
+        },
+        {
+            "quote": "Thấu hiểu nỗi đau của người khác là món quà to lớn nhất mà bạn có thể trao tặng cho họ. Thấu hiểu chính là tên gọi khác của yêu thương.",
+            "author": "Thích Nhất Hạnh",
             "lang": "vi"
         }
     ]
