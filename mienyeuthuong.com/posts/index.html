@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Góc Bài Viết | Miền Yêu Thương</title>
+  <meta name="description" content="Những bài viết, câu chuyện và chiêm nghiệm về cuộc sống và tình yêu thương." />
+  <link rel="canonical" href="https://mienyeuthuong.com/posts/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mienyeuthuong.com/posts/" />
+  <meta property="og:title" content="Góc Bài Viết | Miền Yêu Thương" />
+  <meta property="og:description" content="Những bài viết, câu chuyện và chiêm nghiệm về cuộc sống và tình yêu thương." />
+  <meta property="og:image" content="https://mienyeuthuong.com/fbcover-mienyeuthuong.png" />
+
+  <style>
+    :root {
+      --bg-color: #001f3f;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --card-border: rgba(255, 255, 255, 0.12);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #f39c12;
+      --accent-hover: #e67e22;
+      --link: #38bdf8;
+      --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top-nav {
+      border-bottom: 1px solid var(--card-border);
+      padding: 1.1rem 1.5rem;
+      background: rgba(0, 31, 63, 0.85);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.15rem;
+    }
+
+    .nav-brand:hover {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .nav-link:hover {
+      color: var(--accent);
+    }
+
+    .hero-header {
+      text-align: center;
+      padding: 3.5rem 1rem 2rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .hero-title {
+      font-size: 2.6rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-desc {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+    }
+
+    .posts-container {
+      max-width: 960px;
+      margin: 1.5rem auto 4rem;
+      padding: 0 1.25rem;
+      width: 100%;
+      flex: 1;
+    }
+
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 1.85rem;
+    }
+
+    .post-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+    }
+
+    .post-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(243, 156, 18, 0.4);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-cover-box {
+      height: 190px;
+      overflow: hidden;
+      background: #001428;
+    }
+
+    .card-cover {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .post-card:hover .card-cover {
+      transform: scale(1.05);
+    }
+
+    .card-content {
+      padding: 1.35rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .card-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      margin-bottom: 0.6rem;
+    }
+
+    .card-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.65rem;
+      line-height: 1.4;
+    }
+
+    .card-title a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .card-title a:hover {
+      color: var(--accent);
+    }
+
+    .card-excerpt {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      flex: 1;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--card-border);
+      font-size: 0.85rem;
+    }
+
+    .card-tags {
+      display: flex;
+      gap: 0.35rem;
+      flex-wrap: wrap;
+    }
+
+    .card-tag {
+      color: var(--text-muted);
+    }
+
+    .read-more {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .read-more:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+    }
+
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 2.5rem 1.25rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      background: rgba(0, 0, 0, 0.25);
+    }
+
+    footer a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    @media (max-width: 640px) {
+      .hero-title {
+        font-size: 2.1rem;
+      }
+      .posts-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <div class="nav-container">
+      <a href="/" class="nav-brand">✨ Miền Yêu Thương</a>
+      <div class="nav-links">
+        <a href="/" class="nav-link">Trâm ngôn</a>
+        <a href="/posts/" class="nav-link" style="color: var(--accent);">Góc bài viết</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-header">
+    <h1 class="hero-title">Góc Bài Viết</h1>
+    <p class="hero-desc">Lắng đọng cùng những câu chuyện, bài học và chiêm nghiệm về cuộc sống và tình yêu thương.</p>
+  </header>
+
+  <main class="posts-container">
+    <div class="posts-grid">
+      
+        <article class="post-card">
+          <div class="card-cover-box">
+            <img src="/fbcover-mienyeuthuong.png" alt="Điều Chúa tính luôn trọn vẹn hơn điều ta tính" class="card-cover" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span>📅 24 tháng 11, 2026</span>
+              <span>&bull;</span>
+              <span>1 phút đọc</span>
+            </div>
+            <h2 class="card-title">
+              <a href="dieu-chua-tinh-luon-tron-ven-hon-dieu-ta-tinh.html">Điều Chúa tính luôn trọn vẹn hơn điều ta tính</a>
+            </h2>
+            <p class="card-excerpt">Điều Chúa tính luôn trọn vẹn hơn điều ta tính</p>
+            <div class="card-footer">
+              <div class="card-tags"><span class="card-tag">#Yêu thương</span><span class="card-tag">#Cuộc sống</span></div>
+              <a href="dieu-chua-tinh-luon-tron-ven-hon-dieu-ta-tinh.html" class="read-more">Đọc tiếp &rarr;</a>
+            </div>
+          </div>
+        </article>
+        
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 <a href="/">Miền Yêu Thương</a> &bull; Lưu giữ những khoảnh khắc và bài học yêu thương.</p>
+  </footer>
+
+</body>
+</html>
